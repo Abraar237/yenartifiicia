@@ -2355,7 +2355,7 @@ footer {
   letter-spacing: 0.3;
   font-family: 'Roboto', sans-serif;
   display: block;
-  color: #fff;
+  color: red;
   margin-bottom: 10px;
 }
 
@@ -2648,6 +2648,7 @@ div#clock {
 
 .count-item {
   font-family: monospace;
+  color: #00bfff ;
 }
 
 #hero-image {
