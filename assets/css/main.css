@@ -128,7 +128,7 @@ ol li {
 
 .section-title {
   font-family: "Logirent"; /* Change to the desired font family */
-  background-image: linear-gradient(90deg, hsl(210, 100%, 50%), hsl(240, 75%, 36%));
+  background-image: linear-gradient(90deg, hsl(210, 97%, 53%), hsl(320, 84%, 55%));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -200,6 +200,10 @@ ol li {
   font-size: 24px;
   font-weight: 400;
   color: #ddd;
+}
+
+h2.section-title {
+  font-family: 'Tektur', sans-serif;
 }
 
 .page-title {
@@ -278,7 +282,7 @@ ol li {
 }
 .about-text .title {
   font-family: "Logirent"; /* Change to the desired font family */
-  background-image: linear-gradient(90deg, hsl(210, 100%, 50%), hsl(240, 75%, 36%));
+  background-image: linear-gradient(90deg, hsl(210, 97%, 53%), hsl(320, 84%, 55%));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -385,7 +389,7 @@ a.back-to-top i {
   height: 40px;
   line-height: 40px;
   color: #fff !important;
-  background-image: linear-gradient(65deg, #2b72ad 0, #0099ff 50%);
+  background-image: linear-gradient(90deg, hsl(210, 97%, 53%), hsl(320, 84%, 55%));
   border-radius: 30px;
   text-align: center;
   transition: all 0.2s ease-in-out;
