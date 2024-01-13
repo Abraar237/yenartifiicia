@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Yen-Artificia</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50vh; /* Adjusted height to 50% of the viewport */
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .content-section {
+            padding: 50px 0;
+            margin-top: 50vh; /* Margin to ensure content appears below the video frame */
+        }
+
+        .about {
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 800;
+            font-style: normal;
+            background: linear-gradient(90deg, hsl(180deg 57% 24%) 0%, hsl(180deg 59% 26%) 6%, hsl(180deg 62% 28%) 12%, hsl(180deg 64% 30%) 17%, hsl(180deg 67% 32%) 22%, hsl(180deg 52% 38%) 27%, hsl(180deg 39% 45%) 33%, hsl(180deg 32% 50%) 39%, hsl(180deg 32% 56%) 45%, hsl(180deg 31% 57%) 52%, hsl(180deg 27% 48%) 61%, hsl(180deg 32% 40%) 70%, hsl(180deg 40% 32%) 82%, hsl(180deg 57% 24%) 100%);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 40px;
+        }
+
+        p {
+            margin-left: 40px;
+            font-size: 20px;
+            color: white; /* Added white color for better visibility */
+        }
+
+        .registration-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .registration-btn {
+            /* Add your custom button styles here */
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            background-color:blue; /* Your desired background color */
+            color: #ffffff; /* Your desired text color */
+            border-radius: 30px; /* Increased border-radius for a more curved appearance */
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        @media (max-width: 767px) {
+            video {
+                height: 100vh; /* Adjusted height for small screens */
+            }
+
+            .content-section {
+                margin-top: 100vh; /* Adjusted margin for small screens */
+            }
+        }
+        
+        
+    </style>
+</head>
+
+<body style="background-color: black;">
+
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <video autoplay muted loop>
+        <source src="assets/video/bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <section id="about" class="content-section container-fluid text-center">
+
+        <div class="row content">
+            <div class="col-xs-12 col-md-8 col-md-offset-2" style="color: white;">
+                <!-- Add your content here -->
+                <div class="registration-section">
+                    <p><b>Register for our upcoming 24 hours National Level Hackathon </b></p>
+                    <br>
+                    <a href="index.html" class="registration-btn btn btn-primary btn-lg" role="button">Register Now</a>
+                </div>
+                
+<br>
+                <h2 class="about">ABOUT US</h2>
+<br><br>
+                <p style="font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif; color: #f2e6d0; text-align: left;">VISION OF THE DEPARTMENT</p>
+                <p style="text-align: left;">
+                    To be a centre of excellence to produce engineers in the field of artificial intelligence & Machine Learning
+                    who are committed, innovation driven, self-determined, and capable of developing applications for the improvement of society
+                </p>
+                <br>
+
+                <p style="font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif; color: #f2e6d0; text-align: left;">MISSION OF THE DEPARTMENT</p>
+
+                <p style="text-align: left;"><b>1.</b>To expedite the students to various knowledge platforms through expertized academic guidance and supervision.</p>
+                <br>
+                <p style="text-align: left;"><b>2.</b>To inspire the students to be innovative, skilled engineer by imparting the leadership qualities, team-spirit, and ethical responsibilities</p>
+                <br>
+                <p style="text-align: left;"><b>3.To encourage faculty and students to get involved in lifelong learning, research-oriented and significantly contributing to the advancement of the civilization.</b>
+            </div>
+        </div>
+<br>
+        <!-- <p style="font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif; color: #f2e6d0; text-align: left;">Faculties Of Our Department</p> -->
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            // Update the video position based on scroll
+            $(window).scroll(function () {
+                var scrollPos = $(window).scrollTop();
+                $('video').css({
+                    'top': -scrollPos / 2 + 'px'
+                });
+            });
+        });
+    </script>
+
+    <!-- Add more sections or content here as needed -->
+
+</body>
+
+</html>
