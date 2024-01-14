@@ -22,6 +22,9 @@
             audio.play();
         });
     </script>
+
+
+
     
     <style>
         body,
@@ -92,6 +95,22 @@
             border-radius: 30px; /* Increased border-radius for a more curved appearance */
             transition: background-color 0.3s ease-in-out;
         }
+        .navbar-container {
+            width: 60%; /* Adjust the width as needed */
+            margin: 0 auto; /* Center the container */
+            border-top-left-radius: 10px; /* Adjust the border radius as needed */
+            border-top-right-radius: 10px; /* Adjust the border radius as needed */
+            overflow: hidden; /* Ensure overflow is hidden to hide rounded corners outside the container */
+            background: linear-gradient(90deg, hsl(180deg 57% 24%) 0%, hsl(180deg 59% 26%) 6%, hsl(180deg 62% 28%) 12%, hsl(180deg 64% 30%) 17%, hsl(180deg 67% 32%) 22%, hsl(180deg 52% 38%) 27%, hsl(180deg 39% 45%) 33%, hsl(180deg 32% 50%) 39%, hsl(180deg 32% 56%) 45%, hsl(180deg 31% 57%) 52%, hsl(180deg 27% 48%) 61%, hsl(180deg 32% 40%) 70%, hsl(180deg 40% 32%) 82%, hsl(180deg 57% 24%) 100%);
+        }
+        .navbar {
+            min-height: 60px;
+            border: none; /* Remove the default border */
+        }
+        .navbar-brand img {
+            max-width: 100%; /* Set maximum width to 100% of its container */
+            height: auto; /* Allow the height to adjust proportionally */
+        }
 
         @media (max-width: 767px) {
             video {
@@ -102,47 +121,47 @@
                 margin-top: 100vh; /* Adjusted margin for small screens */
             }
         }
-        
-        
     </style>
 </head>
 
 <body style="background-color: black;">
 
-  <header>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- Add your logo image within the anchor tag with the class 'navbar-brand' -->
-                <a class="navbar-brand" href="#"><img src="assets/ai.png" alt="Logo" style="width: 60px;"></a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
+    <header>
+        <div class="navbar-container">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- Add your logo image within the anchor tag with the class 'navbar-brand' -->
+                        <a class="navbar-brand" href="#"><img src="assets/yen1.png" alt="Logo" style="width:100px;padding: 0 10px; height:auto;"></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#ourteam">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
-    </nav>
-</header>
+    </header>
+
     <video autoplay muted loop>
-      <!-- Add mobile video source -->
-      <source src="assets/1080p.mp4" type="video/mp4" media="(max-width: 767px)">
-      <!-- Add desktop video source -->
-      <source src="assets/video/bg.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-  </video>
+        <!-- Add mobile video source -->
+        <source src="assets/video/mobile.mp4" type="video/mp4" media="(max-width: 767px)">
+        <!-- Add desktop video source -->
+        <source src="assets/video/bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
     
 
-
     <section id="about" class="content-section container-fluid text-center">
-
         <div class="row content">
             <div class="col-xs-12 col-md-8 col-md-offset-2" style="color: white;">
                 <!-- Add your content here -->
@@ -151,19 +170,16 @@
                     <br>
                     <a href="index.html" class="registration-btn btn btn-primary btn-lg" role="button">Register Now!!!</a>
                 </div>
-                
-<br>
+                <br>
                 <h2 class="aboutt">ABOUT US</h2>
-<br><br>
+                <br><br>
                 <p style="font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif; color: #f2e6d0; text-align: left;">VISION OF THE DEPARTMENT</p>
                 <p style="text-align: left;">
                     To be a centre of excellence to produce engineers in the field of artificial intelligence & Machine Learning
                     who are committed, innovation driven, self-determined, and capable of developing applications for the improvement of society
                 </p>
                 <br>
-
                 <p style="font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif; color: #f2e6d0; text-align: left;">MISSION OF THE DEPARTMENT</p>
-
                 <p style="text-align: left;"><b>1.</b>To expedite the students to various knowledge platforms through expertized academic guidance and supervision.</p>
                 <br>
                 <p style="text-align: left;"><b>2.</b>To inspire the students to be innovative, skilled engineer by imparting the leadership qualities, team-spirit, and ethical responsibilities</p>
@@ -171,8 +187,7 @@
                 <p style="text-align: left;"><b>3.To encourage faculty and students to get involved in lifelong learning, research-oriented and significantly contributing to the advancement of the civilization.</b>
             </div>
         </div>
-<br>
-        <!-- <p style="font-weight: bold; font-family: Georgia, 'Times New Roman', Times, serif; color: #f2e6d0; text-align: left;">Faculties Of Our Department</p> -->
+        <br>
     </section>
 
     <script>
