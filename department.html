@@ -28,7 +28,7 @@
         var isMobile = window.innerWidth <= 767; // Adjust the breakpoint as needed
 
         if (isMobile) {
-            video.src = 'assets/video/1080p1.mp4';
+            video.src = 'assets/video/finalmobile.mp4';
         } else {
             video.src = 'assets/video/bg.mp4';
         }
@@ -40,102 +40,123 @@
 
 
     
-    <style>
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
 
+    video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .content-section {
+        padding: 50px 0;
+        margin-top: 50vh;
+    }
+
+    .about,
+    .aboutt {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        background: linear-gradient(90deg, hsl(180deg 57% 24%) 0%, hsl(180deg 59% 26%) 6%, hsl(180deg 62% 28%) 12%, hsl(180deg 64% 30%) 17%, hsl(180deg 67% 32%) 22%, hsl(180deg 52% 38%) 27%, hsl(180deg 39% 45%) 33%, hsl(180deg 32% 50%) 39%, hsl(180deg 32% 56%) 45%, hsl(180deg 31% 57%) 52%, hsl(180deg 27% 48%) 61%, hsl(180deg 32% 40%) 70%, hsl(180deg 40% 32%) 82%, hsl(180deg 57% 24%) 100%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-size: 700% auto;
+        animation: textShine 5s ease-in-out infinite alternate;
+        
+        color: transparent;
+        font-size: 40px;
+        margin-top: 10px; /* Adjusted margin for better alignment */
+    }
+
+    p {
+        margin-left: 20px; /* Adjusted margin for better alignment */
+        font-size: 20px;
+        color: white;
+    }
+
+    .registration-section {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .registration-btn {
+        font-family: monospace;
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        background-color: #4f8c86;
+        color: #ffffff;
+        border-radius: 30px;
+        transition: background-color 0.3s ease-in-out;
+        margin-top: 10px; /* Adjusted margin for better alignment */
+    }
+
+    .navbar-container {
+        width: 90%; /* Adjusted the width for better mobile responsiveness */
+        margin: 0 auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        overflow: hidden;
+        background: linear-gradient(90deg, hsl(180deg 57% 24%) 0%, hsl(180deg 59% 26%) 6%, hsl(180deg 62% 28%) 12%, hsl(180deg 64% 30%) 17%, hsl(180deg 67% 32%) 22%, hsl(180deg 52% 38%) 27%, hsl(180deg 39% 45%) 33%, hsl(180deg 32% 50%) 39%, hsl(180deg 32% 56%) 45%, hsl(180deg 31% 57%) 52%, hsl(180deg 27% 48%) 61%, hsl(180deg 32% 40%) 70%, hsl(180deg 40% 32%) 82%, hsl(180deg 57% 24%) 100%);
+    }
+
+    .navbar {
+        min-height: 60px;
+        border: none;
+    }
+
+    .navbar-brand img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: 767px) {
         video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 50vh; /* Adjusted height to 50% of the viewport */
-            object-fit: cover;
-            z-index: -1;
+            height: 100vh;
         }
 
         .content-section {
-            padding: 50px 0;
-            margin-top: 50vh; /* Margin to ensure content appears below the video frame */
+            margin-top: 80vh; /* Adjusted margin for small screens */
         }
 
-        .about {
-            font-family: "Montserrat", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 800;
-            font-style: normal;
-            background: linear-gradient(90deg, hsl(180deg 57% 24%) 0%, hsl(180deg 59% 26%) 6%, hsl(180deg 62% 28%) 12%, hsl(180deg 64% 30%) 17%, hsl(180deg 67% 32%) 22%, hsl(180deg 52% 38%) 27%, hsl(180deg 39% 45%) 33%, hsl(180deg 32% 50%) 39%, hsl(180deg 32% 56%) 45%, hsl(180deg 31% 57%) 52%, hsl(180deg 27% 48%) 61%, hsl(180deg 32% 40%) 70%, hsl(180deg 40% 32%) 82%, hsl(180deg 57% 24%) 100%);
-            -webkit-background-clip: text;
-            color: transparent;
-            font-size: 40px;
+        @keyframes textShine {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 0%;
+            }
         }
+
+        .about,
         .aboutt {
-            font-family: "Montserrat", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 800;
-            font-style: normal;
-            background: linear-gradient(90deg, hsl(180deg 57% 24%) 0%, hsl(180deg 59% 26%) 6%, hsl(180deg 62% 28%) 12%, hsl(180deg 64% 30%) 17%, hsl(180deg 67% 32%) 22%, hsl(180deg 52% 38%) 27%, hsl(180deg 39% 45%) 33%, hsl(180deg 32% 50%) 39%, hsl(180deg 32% 56%) 45%, hsl(180deg 31% 57%) 52%, hsl(180deg 27% 48%) 61%, hsl(180deg 32% 40%) 70%, hsl(180deg 40% 32%) 82%, hsl(180deg 57% 24%) 100%);
-            -webkit-background-clip: text;
-            color: transparent;
-            font-size: 40px;
-            margin-top: 100px;
+            font-size: 30px; /* Adjusted font size for better visibility */
         }
 
         p {
-            margin-left: 40px;
-            font-size: 20px;
-            color: white; /* Added white color for better visibility */
+            margin-left: 10px; /* Adjusted margin for better alignment */
         }
 
-        .registration-section {
-            text-align: center;
-            margin-top: 20px;
-        }
         .registration-btn {
-            /* Add your custom button styles here */
-            font-family: monospace;
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-            background-color:#4f8c86; /* Your desired background color */
-            color: #ffffff; /* Your desired text color */
-            border-radius: 30px; /* Increased border-radius for a more curved appearance */
-            transition: background-color 0.3s ease-in-out;
+            margin-top: 20px; /* Adjusted margin for better alignment */
         }
-        .navbar-container {
-            width: 60%; /* Adjust the width as needed */
-            margin: 0 auto; /* Center the container */
-            border-top-left-radius: 10px; /* Adjust the border radius as needed */
-            border-top-right-radius: 10px; /* Adjust the border radius as needed */
-            overflow: hidden; /* Ensure overflow is hidden to hide rounded corners outside the container */
-            background: linear-gradient(90deg, hsl(180deg 57% 24%) 0%, hsl(180deg 59% 26%) 6%, hsl(180deg 62% 28%) 12%, hsl(180deg 64% 30%) 17%, hsl(180deg 67% 32%) 22%, hsl(180deg 52% 38%) 27%, hsl(180deg 39% 45%) 33%, hsl(180deg 32% 50%) 39%, hsl(180deg 32% 56%) 45%, hsl(180deg 31% 57%) 52%, hsl(180deg 27% 48%) 61%, hsl(180deg 32% 40%) 70%, hsl(180deg 40% 32%) 82%, hsl(180deg 57% 24%) 100%);
-        }
-        .navbar {
-            min-height: 60px;
-            border: none; /* Remove the default border */
-        }
-        .navbar-brand img {
-            max-width: 100%; /* Set maximum width to 100% of its container */
-            height: auto; /* Allow the height to adjust proportionally */
-        }
+    }
+</style>
 
-        @media (max-width: 767px) {
-            video {
-                height: 100vh; /* Adjusted height for small screens */
-            }
-
-            .content-section {
-                margin-top: 100vh; /* Adjusted margin for small screens */
-            }
-        }
-    </style>
 </head>
 
 <body style="background-color: black;">
