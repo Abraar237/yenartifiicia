@@ -12,149 +12,168 @@
 
     <title>Yen-Artificia</title>
     
-    
-    <!-- <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var audio = document.getElementById('background-sound');
-            audio.play();
+            var video = document.getElementById('background-video');
+            var isMobile = window.innerWidth <= 767; // Adjust the breakpoint as needed
+
+            if (isMobile) {
+                video.src = 'assets/video/finalmobile.mp4';
+            } else {
+                video.src = 'assets/video/bg.mp4';
+            }
+
+            video.load(); // Load the updated source
+            video.play(); // Play the video
         });
-    </script> -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var video = document.getElementById('background-video');
-        var isMobile = window.innerWidth <= 767; // Adjust the breakpoint as needed
+    </script>
 
-        if (isMobile) {
-            video.src = 'assets/video/finalmobile.mp4';
-        } else {
-            video.src = 'assets/video/bg.mp4';
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
         }
-        
 
-        video.load(); // Load the updated source
-        video.play(); // Play the video
-    });
-</script>
-
-
-    
-<style>
-    body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-    }
-
-    video {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 50vh;
-        object-fit: cover;
-        z-index: -1;
-    }
-
-    .content-section {
-        padding: 50px 0;
-        margin-top: 50vh;
-    }
-
-    .about,
-    .aboutt {
-        font-family: "Montserrat", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 800;
-        font-style: normal;
-        background: linear-gradient(90deg, hsl(180deg 57% 24%) 0%, hsl(180, 50%, 50%) 6%, hsl(180deg 62% 28%) 12%, hsl(180deg 64% 30%) 17%, hsl(180deg 67% 32%) 22%, hsl(180deg 52% 38%) 27%, hsl(180deg 39% 45%) 33%, hsl(180deg 32% 50%) 39%, hsl(180deg 32% 56%) 45%, hsl(180deg 31% 57%) 52%, hsl(180deg 27% 48%) 61%, hsl(180deg 32% 40%) 70%, hsl(180, 26%, 55%) 82%, hsl(180deg 57% 24%) 100%);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        background-size: 700% auto;
-        animation: textShine 5s ease-in-out infinite alternate;
-        
-        color: transparent;
-        font-size: 40px;
-        margin-top: 10px; /* Adjusted margin for better alignment */
-    }
-
-    p {
-        margin-left: 20px; /* Adjusted margin for better alignment */
-        font-size: 20px;
-        color: white;
-    }
-
-    .registration-section {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .registration-btn {
-        font-family: monospace;
-        display: inline-block;
-        padding: 15px 30px;
-        font-size: 18px;
-        font-weight: bold;
-        text-align: center;
-        text-decoration: none;
-        background-color: #4f8c86;
-        color: #ffffff;
-        border-radius: 30px;
-        transition: background-color 0.3s ease-in-out;
-        margin-top: 10px; /* Adjusted margin for better alignment */
-    }
-
-    .navbar-container {
-        width: 90%; /* Adjusted the width for better mobile responsiveness */
-        margin: 0 auto;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        overflow: hidden;
-        background: linear-gradient(90deg, hsl(180deg 57% 24%) 0%, hsl(180deg 59% 26%) 6%, hsl(180deg 62% 28%) 12%, hsl(180deg 64% 30%) 17%, hsl(180deg 67% 32%) 22%, hsl(180deg 52% 38%) 27%, hsl(180deg 39% 45%) 33%, hsl(180deg 32% 50%) 39%, hsl(180deg 32% 56%) 45%, hsl(180deg 31% 57%) 52%, hsl(180deg 27% 48%) 61%, hsl(180deg 32% 40%) 70%, hsl(180deg 40% 32%) 82%, hsl(180deg 57% 24%) 100%);
-    }
-
-    .navbar {
-        min-height: 60px;
-        border: none;
-    }
-
-    .navbar-brand img {
-        max-width: 100%;
-        
-    }
-
-    @media (max-width: 767px) {
         video {
-            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+            z-index: -1;
         }
 
         .content-section {
-            margin-top: 80vh; /* Adjusted margin for small screens */
-        }
-
-        @keyframes textShine {
-            0% {
-                background-position: 0% 0%;
-            }
-            100% {
-                background-position: 100% 0%;
-            }
+            padding: 50px 0;
+            margin-top: 50vh;
         }
 
         .about,
         .aboutt {
-            font-size: 30px; /* Adjusted font size for better visibility */
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 800;
+            font-style: normal;
+            background: linear-gradient(90deg, hsl(180deg 57% 24%) 0%, hsl(180, 50%, 50%) 6%, hsl(180deg 62% 28%) 12%, hsl(180deg 64% 30%) 17%, hsl(180deg 67% 32%) 22%, hsl(180deg 52% 38%) 27%, hsl(180deg 39% 45%) 33%, hsl(180deg 32% 50%) 39%, hsl(180deg 32% 56%) 45%, hsl(180deg 31% 57%) 52%, hsl(180deg 27% 48%) 61%, hsl(180deg 32% 40%) 70%, hsl(180, 26%, 55%) 82%, hsl(180deg 57% 24%) 100%);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-size: 700% auto;
+            animation: textShine 5s ease-in-out infinite alternate;
+            color: transparent;
+            font-size: 40px;
+            margin-top: 10px; /* Adjusted margin for better alignment */
         }
 
         p {
-            margin-left: 10px; /* Adjusted margin for better alignment */
+            margin-left: 20px; /* Adjusted margin for better alignment */
+            font-size: 20px;
+            color: white;
+        }
+
+        .registration-section {
+            text-align: center;
+            margin-top: 20px;
         }
 
         .registration-btn {
-            margin-top: 20px; /* Adjusted margin for better alignment */
+            font-family: monospace;
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            background-color: #4f8c86;
+            color: #ffffff;
+            border-radius: 30px;
+            transition: background-color 0.3s ease-in-out;
+            margin-top: 10px; /* Adjusted margin for better alignment */
         }
-    }
-</style>
 
+        .navbar-container {
+            width: 90%; /* Adjusted the width for better mobile responsiveness */
+            margin: 0 auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            color: #4f8c86;
+            overflow: hidden;
+            background-color:black !important;
+            background: linear-gradient(90deg, hsl(180deg 57% 24%) 0%, hsl(180deg 59% 26%) 6%, hsl(180deg 62% 28%) 12%, hsl(180deg 64% 30%) 17%, hsl(180deg 67% 32%) 22%, hsl(180deg 52% 38%) 27%, hsl(180deg 39% 45%) 33%, hsl(180deg 32% 50%) 39%, hsl(180deg 32% 56%) 45%, hsl(180deg 31% 57%) 52%, hsl(180deg 27% 48%) 61%, hsl(180deg 32% 40%) 70%, hsl(180deg 40% 32%) 82%, hsl(180deg 57% 24%) 100%);
+        }
+
+        .navbar {
+    min-height: 60px;
+    border: none;
+    color: #4f8c86;
+    border-radius: 15px; /* Added border-radius for rounded edges */
+    background-color: black; /* Set the background color to white */
+    transition: background-color 0.3s ease-in-out; 
+}
+
+
+        .navbar-brand img {
+            max-width: 100%;
+        }
+
+        .navbar-nav > li > a {
+    color: #4f8c86;
+    font-weight: bold;
+    border-radius: 15px; /* Added border-radius for rounded edges */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+    background-color: peachpuff; /* Change to the desired peach color */
+    color: #4f8c86; /* Change to the desired text color */
+}
+
+    
+
+        @media (max-width: 767px) {
+            video {
+                height: 100vh;
+            }
+
+            .content-section {
+                margin-top: 80vh; /* Adjusted margin for small screens */
+            }
+
+            @keyframes textShine {
+                0% {
+                    background-position: 0% 0%;
+                }
+                100% {
+                    background-position: 100% 0%;
+                }
+            }
+
+            .about,
+            .aboutt {
+                font-size: 30px; /* Adjusted font size for better visibility */
+            }
+
+            p {
+                margin-left: 10px; /* Adjusted margin for better alignment */
+            }
+
+            .registration-btn {
+                margin-top: 20px; /* Adjusted margin for better alignment */
+            }
+        }
+        .navbar-nav li .nav-link {
+        color: #4f8c86 !important; /* Added !important to override inline styles */
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .navbar-nav li .nav-link:hover {
+        text-decoration: underline;
+        color: #ffffff !important; /* Added !important to override inline styles */
+    }
+    </style>
 </head>
 
 <body style="background-color: black;">
@@ -170,16 +189,15 @@
                             <span class="icon-bar"></span>
                         </button>
                         <!-- Add your logo image within the anchor tag with the class 'navbar-brand' -->
-                        <a class="navbar-brand" href="#"><img src="assets/yen1.png" alt="Logo" style="width:100px;padding: 0 10px; margin-top: -15px;"></a>
+                        <a class="navbar-brand" href="https://yit.edu.in/"><img src="assets/yen1.png" alt="Logo" style="width:100px;padding: 0 10px; margin-top: -15px;"></a>
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#" style="color:#4f8c86;">HOME</a></li>
-                            <li><a href="#about" style="color: #4f8c86;">ABOUT</a></li>
-                            <li><a href="index.html" style="color: #4f8c86;">HACKATHON</a></li>
+                            <li><a  href="#" class="nav-link">HOME</a></li>
+                            <li><a style="color:#4f8c86" href="#about" class="nav-link">ABOUT</a></li>
+                            <li><a style="color:#4f8c86" href="index.html" class="nav-link">HACKATHON</a></li>
                         </ul>
                     </div>
-                    
                 </div>
             </nav>
         </div>
