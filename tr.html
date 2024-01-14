@@ -153,7 +153,7 @@
 
     <video autoplay muted loop>
         <!-- Add mobile video source -->
-        <source src="assets/video/mobile.mp4" type="video/mp4" media="(max-width: 767px)">
+        <source src="assets/video/1080p1.mp4" type="video/mp4" media="(max-width: 767px)">
         <!-- Add desktop video source -->
         <source src="assets/video/bg.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -198,6 +198,22 @@
                 $('video').css({
                     'top': -scrollPos / 2 + 'px'
                 });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Smooth scrolling for all links
+            $("a").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        window.location.hash = hash;
+                    });
+                }
             });
         });
     </script>
