@@ -220,17 +220,36 @@
         <br>
     </section>
 
-    <script>
-        $(document).ready(function () {
-            // Update the video position based on scroll
+  <!-- Include jQuery and Bootstrap scripts here -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var video = document.getElementById('background-video');
+        var isMobile = window.innerWidth <= 767; // Adjust the breakpoint as needed
+
+        if (isMobile) {
+            // Mobile-specific scrolling behavior
+            $(window).scroll(function () {
+                var scrollPos = $(window).scrollTop();
+                $('video').css({
+                    'top': -scrollPos + 'px' // Adjusted for faster scrolling on mobile
+                });
+            });
+        } else {
+            // Desktop-specific scrolling behavior
             $(window).scroll(function () {
                 var scrollPos = $(window).scrollTop();
                 $('video').css({
                     'top': -scrollPos / 2 + 'px'
                 });
             });
-        });
-    </script>
+        }
+
+        // Rest of your video source loading and playing logic
+        // ...
+    });
+</script>
+
     <script>
         $(document).ready(function () {
             // Smooth scrolling for all links
