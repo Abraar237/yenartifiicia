@@ -2574,9 +2574,27 @@ img#nav-logo {
   font-size: 50px;
 }
 
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  animation: marquee-scroll 15s linear infinite;
+  font-family: monospace;
+}
+
+@keyframes marquee-scroll {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(+100%);
+  }
+}
 #hero-area .contents .banner-info {
   font-size: 18px;
-  font-style: italic;
+  font-style: normal;
   margin-bottom: 22px;
   line-height: 24px;
   color: #fff;
