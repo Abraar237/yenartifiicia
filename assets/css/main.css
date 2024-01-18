@@ -2585,15 +2585,32 @@ img#nav-logo {
 }
 
 @keyframes marquee-scroll {
-  0% {
-      transform: translateX(-100%);
+  0%, 100% {
+      transform: translateX(50%);
   }
-  100% {
-      transform: translateX(+100%);
+ 50% {
+      transform: translateX(-50%);
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  /* Adjust animation for smaller screens */
+  @keyframes marquee-scroll {
+      0%, 100% {
+          transform: translateX(100%);
+      }
+      25% {
+          transform: translateX(-100%);
+      }
   }
 }
 #hero-area .contents .banner-info {
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  background: -webkit-linear-gradient(65deg, #0099ff 0, #0099ff 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-style: normal;
   margin-bottom: 22px;
   line-height: 24px;
