@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #000000;
+        margin: 0;
+        display: flex;
+        flex-direction: column; /* Align items vertically */
+        align-items: center;
+        height: 100vh;
+      }
+
+      form {
+        background-color: #000000;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(242, 233, 233, 0.1);
+        padding: 20px;
+        width: 80%; /* Adjusted width for responsiveness */
+        max-width: 400px; /* Set a maximum width */
+        margin-top: 20px; /* Add margin at the top */
+      }
+
+      label {
+        color: #fff;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+      
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color:#4f8c86; /* Your desired background color */
+        color: #ffffff; /* Your desired text color */
+        border-radius: 30px; /* Increased border-radius for a more curved appearance */
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      button:hover {
+        background-color: #0f285d;
+      }
+
+      /* Style for the QR code image */
+      #qrCode {
+
+        width: 150px; /* Adjust the size as needed */
+        height: 150px;
+        margin-top: 100px; /* Add margin at the top */
+      }
+
+      .payment-heading{
+        letter-spacing: 3px;
+      }
+      .head-font{
+        font-family: monospace;
+        letter-spacing: 4px;
+        font-size: 10px;
+      }
+      .head-fonts{
+        font-family: monospace;
+        letter-spacing: 2px;
+        font-size: 12px;
+      }
+      
+
+      .navbar-container {
+        width: 60%; /* Adjust the width as needed */
+        margin: 0 auto; /* Center the container */
+        border-top-left-radius: 10px; /* Adjust the border radius as needed */
+        border-top-right-radius: 10px; /* Adjust the border radius as needed */
+        overflow: hidden; /* Ensure overflow is hidden to hide rounded corners outside the container */
+        background: linear-gradient(90deg, hsl(180deg 57% 24%) 0%, hsl(180deg 59% 26%) 6%, hsl(180deg 62% 28%) 12%, hsl(180deg 64% 30%) 17%, hsl(180deg 67% 32%) 22%, hsl(180deg 52% 38%) 27%, hsl(180deg 39% 45%) 33%, hsl(180deg 32% 50%) 39%, hsl(180deg 32% 56%) 45%, hsl(180deg 31% 57%) 52%, hsl(180deg 27% 48%) 61%, hsl(180deg 32% 40%) 70%, hsl(180deg 40% 32%) 82%, hsl(180deg 57% 24%) 100%);
+    }
+    .navbar {
+        min-height: 60px;
+        border: none; /* Remove the default border */
+    }
+    .navbar-brand img {
+        max-width: 100%; /* Set maximum width to 100% of its container */
+        height: auto; /* Allow the height to adjust proportionally */
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+        <div class="navbar-container">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- <a class="navbar-brand" href="#"><img src="assets/img/logouns.png" alt="Logo" style="width:180px;padding: 0 30px; height:auto;"></a> -->
+                        <!-- Add your logo image within the anchor tag with the class 'navbar-brand' -->
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="unscramble.html">Home</a></li>
+                            <!-- <li><a href="#about">About</a></li>
+                            <li><a href="#ourteam">Contact</a></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <h1 style="font-family: monospace; color:white;margin-top:20px" class="payment-heading"> PAYMENT</h1>
+    <img id="qrCode" src="assets/qr-pay.png" alt="QR Code">
+    <br>
+    <P class="head-font" style="color: white;">SCAN HERE</P>
+    <P class="head-fonts" style="color: white;">PROCEED WITH THE PAYMENT OF 500</P>
+    <form 
+      method="POST" 
+      action="https://script.google.com/macros/s/AKfycbxm3WT_yZ3wHs4TlhnvzZF-JN41FMC7Bph-QwnHOTgHzsDgGQwTuUcSulySRzbKmST1Mg/exec"
+    >
+      <label for="name">TEAM NAME: </label>
+      <input id="name" name="NAME" type="text" placeholder="Enter your name" required><br>
+
+      <label for="transactionId">UTR ID:</label>
+      <input id="transactionId" name="UTR NUMBER" type="text" placeholder="ENTER UTR NUMBER" required><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
