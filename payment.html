@@ -140,17 +140,36 @@
     <br>
     <P class="head-font" style="color: white;">SCAN HERE</P>
     <P class="head-fonts" style="color: white;">PROCEED WITH THE PAYMENT OF 500</P>
-    <form 
-      method="POST" 
-      action="https://script.google.com/macros/s/AKfycbxm3WT_yZ3wHs4TlhnvzZF-JN41FMC7Bph-QwnHOTgHzsDgGQwTuUcSulySRzbKmST1Mg/exec"
-    >
-      <label for="name">TEAM NAME: </label>
+    <form id="myForm" method="POST" action="https://script.google.com/macros/s/AKfycbxm3WT_yZ3wHs4TlhnvzZF-JN41FMC7Bph-QwnHOTgHzsDgGQwTuUcSulySRzbKmST1Mg/exec">
+      <label for="name">TEAM NAME:</label>
       <input id="name" name="NAME" type="text" placeholder="Enter your name" required><br>
-
+  
       <label for="transactionId">UTR ID:</label>
       <input id="transactionId" name="UTR NUMBER" type="text" placeholder="ENTER UTR NUMBER" required><br><br>
-
-      <button type="submit">Submit</button>
-    </form>
+  
+      <button type="button" onclick="submitForm()">Submit</button>
+  </form>
+  
+  <script>
+      function submitForm() {
+          // Get form data
+          var form = document.getElementById("myForm");
+          var formData = new FormData(form);
+  
+          // Send form data using AJAX
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", form.action, true);
+          xhr.onreadystatechange = function () {
+              if (xhr.readyState == 4 && xhr.status == 200) {
+                  // Update content on successful submission
+                  document.getElementById("myForm").innerHTML = "<p>Your response has been noted.</p>";
+              }
+          };
+  
+          // You may want to add additional logic to handle errors or provide user feedback
+          xhr.send(formData);
+      }
+  </script>
+  
   </body>
 </html>
