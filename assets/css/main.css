@@ -2574,9 +2574,44 @@ img#nav-logo {
   font-size: 50px;
 }
 
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  animation: marquee-scroll 15s linear infinite;
+  font-family: monospace;
+}
+
+@keyframes marquee-scroll {
+  0%, 100% {
+      transform: translateX(50%);
+  }
+ 50% {
+      transform: translateX(-50%);
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  /* Adjust animation for smaller screens */
+  @keyframes marquee-scroll {
+      0%, 100% {
+          transform: translateX(100%);
+      }
+      25% {
+          transform: translateX(-100%);
+      }
+  }
+}
 #hero-area .contents .banner-info {
-  font-size: 18px;
-  font-style: italic;
+  font-size: 22px;
+  font-weight: bold;
+  background: -webkit-linear-gradient(65deg, #0099ff 0, #0099ff 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: normal;
   margin-bottom: 22px;
   line-height: 24px;
   color: #fff;
@@ -2949,3 +2984,39 @@ li.stylish-list {
     height: auto; /* Allow height to adjust based on content */
   }
 }
+
+.glassmorphic {
+  background: rgba(255, 255, 255, 0.08); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+  border: 2px solid transparent; /* Set border to transparent */
+ 
+  border-radius: 20px; /* Adjust the radius to match the container border radius */
+  position: relative;
+}
+
+
+
+.glassmorphic::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  border: 2px solid transparent; /* Set border to transparent */
+  
+  border-radius: 22px; /* Adjust the radius to match the container border radius + border width */
+  z-index: -1;
+}
+
+
+
+  .shortlisted-names {
+    color: white;
+    list-style-type: disc !important;
+    margin-left:8px;
+    margin-top: 4px;
+    font-family: monospace;
+    letter-spacing: 2px;
+    font-weight:normal;
+  }
