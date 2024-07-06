@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valmetrics Dash App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      height: 100%;
+    }
+    .main-content {
+      flex: 1;
+      background-color:#f3f3ef;
+      color: #080808;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .iframe-container {
+      flex: 0 0 40%;
+      height: 100%;
+      border: none;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+    h1{
+        font-family: fantasy;
+        color: #16213e;
+    }
+    h2 {
+      color: #16213e;
+      font-family: fantasy;
+    }
+    .module {
+      background-color: #e7e5d8;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+
+    }
+    .module h2 {
+      color: #04113e;
+      margin-top: 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main-content">
+      <h1>Machine Learning Syllabus</h1>
+      
+      <div class="module">
+        <h2>MODULE-1: Introduction</h2>
+        <ul>
+          <li>Machine learning Landscape: What is ML?, Why ML?, Types of ML, Main challenges of ML</li>
+          <li>Concept learning and Learning Problems</li>
+          <li>Designing Learning systems</li>
+          <li>Perspectives and Issues</li>
+          <li>Concept Learning-Find 5-Version Spaces and Candidate Elimination Algorithm</li>
+          <li>Remarks on VS- Inductive</li>
+        </ul>
+        <!-- <p>Textbook references: Textbook 2: Chapter 1, Textbook 1: Chapters 1 and 2</p> -->
+      </div>
+
+      <div class="module">
+        <h2>MODULE-2: End-to-end Machine Learning Project & Classification</h2>
+        <ul>
+          <li>Working with real data</li>
+          <li>Look at the big picture</li>
+          <li>Get the data</li>
+          <li>Discover and visualize the data</li>
+          <li>Prepare the data</li>
+          <li>Select and train the model</li>
+          <li>Fine-tune your model</li>
+          <li>Classification: MNIST, training a binary classifier, performance measures</li>
+          <li>Multiclass classification, error analysis, multi-label classification, multi-output classification</li>
+        </ul>
+      </div>
+
+      <div class="module">
+        <h2>MODULE-3: Training Models & Support Vector Machines</h2>
+        <ul>
+          <li>Linear regression</li>
+          <li>Gradient descent</li>
+          <li>Polynomial regression</li>
+          <li>Learning curves</li>
+          <li>Regularized linear models</li>
+          <li>Logistic regression</li>
+          <li>Support Vector Machines: Linear, Nonlinear, SVM regression</li>
+          <li>SVM under the hood</li>
+        </ul>
+      </div>
+
+      <div class="module">
+        <h2>MODULE-4: Decision Trees & Ensemble Learning</h2>
+        <ul>
+          <li>Training and Visualizing Decision Trees</li>
+          <li>Making predictions</li>
+          <li>Estimating class</li>
+          <li>CART training algorithm</li>
+          <li>Computational complexity</li>
+          <li>GINI impurity</li>
+          <li>Entropy</li>
+          <li>Regularization Hyperparameters</li>
+          <li>Regression trees</li>
+          <li>Instability in Decision Trees</li>
+          <li>Ensemble Learning and Random Forests</li>
+          <li>Voting classifiers, Bagging and pasting</li>
+          <li>Random patches and Random forests</li>
+          <li>Boosting and Stacking</li>
+        </ul>
+      </div>
+
+      <div class="module">
+        <h2>MODULE-5: Bayesian Learning</h2>
+        <ul>
+          <li>Bayes Theorem</li>
+          <li>Concept Learning</li>
+          <li>Maximum Likelihood</li>
+          <li>Minimum Description Length Principle</li>
+          <li>Bayes Optimal Classifier</li>
+          <li>Gibbs Algorithm</li>
+          <li>Naïve Bayes Classifier (with example)</li>
+          <li>Bayesian Belief Network</li>
+          <li>EM Algorithm</li>
+        </ul>
+      </div>
+    </div>
+    <div class="iframe-container">
+      <iframe src="https://open-ml.streamlit.app/?embed=True"></iframe>
+    </div>
+  </div>
+</body>
+</html>
