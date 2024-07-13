@@ -15,13 +15,13 @@
 
         .lecture-card {
             margin-top: 65px;
-            background-color: rgb(208, 198, 189);
+            background-color: rgb(0, 0, 0);
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 20px;
             margin-bottom: 20px;
             text-align: center;
-            color: black;
+            color: #466360;
         }
 
         .lecture-card img {
@@ -46,16 +46,18 @@
             color: white; /* Toggler icon color */
         }
 
-        .nav-link {
-            color: #4f8c86; /* Default link color */
-            text-decoration: none;
-            padding: 10px; /* Padding around links */
-            transition: color 0.3s ease; /* Smooth color transition */
-        }
+        .navbar-nav li .nav-link {
+        color: #4f8c86 !important; /* Added !important to override inline styles */
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+        font-weight: bold;
+        font-feature-settings: "aalt";
+    }
 
-        .nav-link:hover {
-            color: #4f8c86; /* Hover color */
-        }
+    .navbar-nav li .nav-link:hover {
+        text-decoration: underline;
+        color: #ffffff !important; /* Added !important to override inline styles */
+    }
     </style>
 </head>
 <body>
@@ -64,18 +66,21 @@
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
                 <div class="container d-flex justify-content-between align-items-center">
                     <a class="navbar-brand" href="https://yit.edu.in/">
-                        <img src="assets/img/yit.png" alt="Logo" style="height: 50px;">
+                        <img src="/assets/img/yit.png" alt="Logo" style="height: 50px;">
                     </a>
                     <button class="navbar-toggler" type="button" onclick="toggleNavbar()">
                         ☰
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto"> <!-- ml-auto to push to right -->
-                            <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
-                            <!-- <li class="nav-item"><a href="#about" class="nav-link">ABOUT</a></li> -->
-                            <li class="nav-item"><a href="unscramble.html" class="nav-link">HACKATHON</a></li>
-                            <li class="nav-item"><a href="department.html" class="nav-link">DEPARTMENT</a></li>
-                            <li class="nav-item"><a href="/matrix-fusion_2.0/" class="nav-link">MATRIX FUSION</a></li>
+                           
+                            <li><a href="/" class="nav-link" style="color: #4f8c86;">HOME</a></li>
+                            <li><a href="/unscramble.html" class="nav-link" style="color: #4f8c86;">HACKATHON</a></li>
+                            <li><a href="/department/" class="nav-link" style="color: #4f8c86;">DEPARTMENT</a></li>
+                            <li><a href="/matrix-fusion_2.0/" class="nav-link" style="color: #4f8c86;">MATRIX FUSION</a></li>
+                            
+
+
                         </ul>
                     </div>
                 </div>
@@ -86,50 +91,57 @@
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="lecture-card" data-toggle="modal" data-target="#lecturerModal1">
-                    <img src="assets/img/hod.jpg" alt="Prasanna Kumar">
+                    <img src="prof_img/hod.jpg" alt="Prasanna Kumar">
                     <h4>Prasanna Kumar</h4>
-                    <p>Professor & Head</p>
+                    <p><b>Professor & Head</b></p>
+                    <p style="margin-top: -0.5cm;">B.E, M.Tech, MISTE
+
+                    </p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="lecture-card">
-                    <img src="assets/img/abj.png" alt="Lecturer 2">
+                    <img src="prof_img/abj.png" alt="Lecturer 2">
                     <h4>Abdul Majeed K M</h4>
-                    <p>Assistant professor</p>
+                    <p><b>Assistant Professor</b> </p>
+                    <p style="margin-top: -0.5cm;">B.E, M.TECH</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="lecture-card">
-                    <img src="assets/img/rm.png" alt="Lecturer 3">
+                    <img src="prof_img/rm.png" alt="Lecturer 3">
                     <h4>Ramya A</h4>
-                    <p>Assistant professor</p>
+                    <p><b>Assistant Professor</b></p>
+                    <p style="margin-top: -0.5cm;"> B.E, M.Tech.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="lecture-card">
-                    <img src="assets/img/sj.jpg" alt="Lecturer 3">
+                    <img src="prof_img/sj.jpg" alt="Lecturer 3">
                     <h4>Mohammed Siraj B</h4>
-                    <p>Assistant professor</p>
+                    <p><b>Assistant Professor</b></p>
+                    <p style="margin-top: -0.5cm;">B.E, M.E, (PhD)</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="lecture-card">
-                    <img src="assets/img/ab.jpg" alt="Lecturer 3" style="width: auto; height: 310px;">
+                    <img src="prof_img/ab.jpg" alt="Lecturer 3" style="width: auto; height: 310px;">
                     <h4>Abinas V</h4>
-                    <p>Assistant professor</p>
+                    <p><b>Assistant Professor</b></p>
+                    <p style="margin-top: -0.5cm;"> B-Tech , M-Tech, (PhD)</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="lecturerModal1" tabindex="-1" role="dialog" aria-labelledby="lecturerModalLabel1" aria-hidden="true">
+    <!-- <div class="modal fade" id="lecturerModal1" tabindex="-1" role="dialog" aria-labelledby="lecturerModalLabel1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-white text-center">
                     <h5 class="modal-title text-dark" id="lecturerModalLabel1">Prasanna Kumar Details</h5>
                 </div>
                 <div class="modal-body text-center">
-                    <img src="assets/img/hod.jpg" class="img-fluid rounded-circle mb-3" style="width: 120px;" alt="Prasanna Kumar">
+                    <img src="prof_img/hod.jpg" class="img-fluid rounded-circle mb-3" style="width: 120px;" alt="Prasanna Kumar">
                     <p class="mb-2">Prasanna Kumar</p>
                     <p class="mb-4">Professor & Head</p>
                     <p class="text-muted">Detailed information about Prasanna Kumar, Professor & Head.</p>
@@ -139,7 +151,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
